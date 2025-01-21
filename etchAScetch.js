@@ -50,11 +50,17 @@ function loadAtStart() {
 
 function addloadNewGridListener() {
   const submitButton = document.querySelector("#gridLoadButton");
-  submitButton.addEventListener("click", resetBoard);
+  submitButton.addEventListener("click", setNewGrid);
   console.dir(submitButton);
 }
 
 function generateBoard() {
+  generateGrid(addSideChoiceListener());
+  addHoverListener();
+}
+
+function setNewGrid() {
+  resetBoard();
   generateGrid(addSideChoiceListener());
   addHoverListener();
 }
