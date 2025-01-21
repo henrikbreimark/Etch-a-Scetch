@@ -1,8 +1,30 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 3 rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+#options {
+  width: 100%;
+  text-align: center;
+}
+
 #pixelContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1em;
-  padding: 0.1em;
+  gap: 0.1rem;
+  padding: 0.1rem;
   width: 500px;
   height: 500px;
   border: 1px solid blue;
