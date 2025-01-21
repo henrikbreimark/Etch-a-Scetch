@@ -37,7 +37,13 @@ function addHoverListener() {
  */
 function addSideChoiceListener() {
   const sideSubmitBox = document.querySelector("#submitSides");
-  return sideSubmitBox.value;
+  let sideValue = sideSubmitBox.value;
+  if (sideValue > 100 || sideValue < 0) {
+    alert("Only values between 0 and 100 are allowed.");
+    return void 0;
+  } else {
+    return sideValue;
+  }
 }
 
 /**
