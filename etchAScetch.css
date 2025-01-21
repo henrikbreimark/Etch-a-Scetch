@@ -1,0 +1,16 @@
+#pixelContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em;
+  padding: 0.1em;
+  width: 500px;
+  height: 500px;
+  border: 1px solid blue;
+  justify-content: center;
+}
+
+.square {
+  background-color: black;
+  opacity: 0;
+  flex-basis: 24%;
+}
