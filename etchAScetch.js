@@ -1,12 +1,8 @@
 //Div that is going to contain grid.
 const container = document.querySelector("#pixelContainer");
 
-//The length of the grids sides.
-let gridSideSize = 4;
-
 //At start: Create grid and add eventListeners to grid-elements
-generateGrid(addSideChoiceListener());
-addHoverListener();
+loadAtStart();
 
 /**
  *
@@ -19,6 +15,7 @@ function generateGrid(gridSides) {
       let square = document.createElement("div");
       square.classList.add("square");
       container.appendChild(square);
+      square.style.flexBasis = `calc(99% / ${gridSides})`;
     }
   }
 }
@@ -36,8 +33,17 @@ function addHoverListener() {
   );
 }
 
-//Gets the number of sides selected by user.
+/**Gets the number of sides selected by user.
+ */
 function addSideChoiceListener() {
   const sideSubmitBox = document.querySelector("#submitSides");
   return sideSubmitBox.value;
+}
+
+/**
+ * Loads a grid at page load.
+ */
+function loadAtStart() {
+  generateGrid(addSideChoiceListener());
+  addHoverListener();
 }
