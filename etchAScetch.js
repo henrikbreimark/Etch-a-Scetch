@@ -44,6 +44,22 @@ function addSideChoiceListener() {
  * Loads a grid at page load.
  */
 function loadAtStart() {
+  generateBoard();
+  addloadNewGridListener();
+}
+
+function addloadNewGridListener() {
+  const submitButton = document.querySelector("#gridLoadButton");
+  submitButton.addEventListener("click", resetBoard);
+  console.dir(submitButton);
+}
+
+function generateBoard() {
   generateGrid(addSideChoiceListener());
   addHoverListener();
+}
+
+function resetBoard() {
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((square) => square.remove());
 }
