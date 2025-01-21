@@ -5,7 +5,7 @@ const container = document.querySelector("#pixelContainer");
 let gridSideSize = 4;
 
 //At start: Create grid and add eventListeners to grid-elements
-generateGrid(gridSideSize);
+generateGrid(addSideChoiceListener());
 addHoverListener();
 
 /**
@@ -34,4 +34,10 @@ function addHoverListener() {
       evt.target.style.opacity = newOpacity;
     })
   );
+}
+
+//Gets the number of sides selected by user.
+function addSideChoiceListener() {
+  const sideSubmitBox = document.querySelector("#submitSides");
+  return sideSubmitBox.value;
 }
